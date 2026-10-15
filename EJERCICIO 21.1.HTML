@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio de vectores</title>
+</head>
+<body>
+
+    <h1>Vector de 8 elementos</h1>
+
+    <script>
+        let vector = [];
+        let sumaTotal = 0;
+        let sumaMayores36 = 0;
+        let cantidadMayores50 = 0;
+
+        // Ingresar los 8 elementos del vector
+        for (let i = 0; i < 8; i++) {
+            vector[i] = parseInt(prompt("Ingrese el elemento " + (i + 1) + ":"));
+
+            sumaTotal = sumaTotal + vector[i];
+
+            if (vector[i] > 36) {
+                sumaMayores36 = sumaMayores36 + vector[i];
+            }
+
+            if (vector[i] > 50) {
+                cantidadMayores50++;
+            }
+        }
+
+        // Mostrar los resultados
+        document.write("Elementos del vector: " + vector.join(", ") + "<br>");
+        document.write("Suma de todos los elementos: " + sumaTotal + "<br>");
+        document.write("Suma de los elementos mayores a 36: " + sumaMayores36 + "<br>");
+        document.write("Cantidad de valores mayores a 50: " + cantidadMayores50);
+    </script>
+
+</body>
+</html>

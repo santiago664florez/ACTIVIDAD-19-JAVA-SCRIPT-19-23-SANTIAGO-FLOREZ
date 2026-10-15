@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Cuatrimestre del año</title>
+</head>
+<body>
+
+    <h1>Cuatrimestre del año</h1>
+
+    <script>
+        let mes = parseInt(prompt("Ingrese el número del mes (1 al 12):"));
+
+        if (mes >= 1 && mes <= 4) {
+            document.write("Estamos en el primer cuatrimestre");
+        } else if (mes >= 5 && mes <= 8) {
+            document.write("Estamos en el segundo cuatrimestre");
+        } else if (mes >= 9 && mes <= 12) {
+            document.write("Estamos en el tercer cuatrimestre");
+        } else {
+            document.write("El mes ingresado no es válido");
+        }
+    </script>
+
+</body>
+</html>

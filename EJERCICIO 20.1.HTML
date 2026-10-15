@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Fecha actual</title>
+</head>
+<body>
+
+    <h1>Fecha de hoy</h1>
+
+    <script>
+        function obtenerFecha() {
+            let fecha = new Date();
+
+            let dias = ["Domingo", "Lunes", "Martes", "Miércoles",
+                        "Jueves", "Viernes", "Sábado"];
+
+            let meses = ["Enero", "Febrero", "Marzo", "Abril",
+                         "Mayo", "Junio", "Julio", "Agosto",
+                         "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+
+            let diaSemana = fecha.getDay();
+            let dia = fecha.getDate();
+            let mes = fecha.getMonth();
+            let anio = fecha.getFullYear();
+
+            return "Hoy es " + dias[diaSemana] + " " + dia +
+                   " de " + meses[mes] + " de " + anio;
+        }
+
+        document.write(obtenerFecha());
+    </script>
+
+</body>
+</html>

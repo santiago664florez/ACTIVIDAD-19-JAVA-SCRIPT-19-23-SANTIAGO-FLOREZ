@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Suma de dos vectores</title>
+</head>
+<body>
+
+    <h1>Suma de dos vectores</h1>
+
+    <script>
+        let vector1 = [];
+        let vector2 = [];
+        let vector3 = [];
+        let tamano = 5;
+
+        // Cargar el primer vector
+        for (let i = 0; i < tamano; i++) {
+            vector1[i] = parseInt(prompt("Ingrese el valor " + (i + 1) + " del primer vector:"));
+        }
+
+        // Cargar el segundo vector
+        for (let i = 0; i < tamano; i++) {
+            vector2[i] = parseInt(prompt("Ingrese el valor " + (i + 1) + " del segundo vector:"));
+        }
+
+        // Sumar componente a componente
+        for (let i = 0; i < tamano; i++) {
+            vector3[i] = vector1[i] + vector2[i];
+        }
+
+        // Mostrar los resultados
+        document.write("Primer vector: " + vector1.join(", ") + "<br>");
+        document.write("Segundo vector: " + vector2.join(", ") + "<br>");
+        document.write("Vector suma: " + vector3.join(", "));
+    </script>
+
+</body>
+</html>

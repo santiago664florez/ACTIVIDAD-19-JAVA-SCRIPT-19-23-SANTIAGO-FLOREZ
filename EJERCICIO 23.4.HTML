@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Palíndromo</title>
+</head>
+<body>
+
+    <h1>Comprobar si es palíndromo</h1>
+
+    <script>
+        let texto = prompt("Ingrese una palabra o texto:");
+
+        texto = texto.toLowerCase().replaceAll(" ", "");
+
+        let invertido = texto.split("").reverse().join("");
+
+        if (texto == invertido) {
+            document.write("El texto ingresado es un palíndromo.");
+        } else {
+            document.write("El texto ingresado no es un palíndromo.");
+        }
+    </script>
+
+</body>
+</html>

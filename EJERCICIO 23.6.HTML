@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>FUNCIONES CON STRING</title>
+</head>
+<body>
+
+    <h1>Operaciones con una cadena de texto</h1>
+
+    <script>
+        let texto = prompt("Ingrese una palabra o texto:");
+
+        // a) Imprimir la primera mitad de los caracteres
+        function primeraMitad(cadena) {
+            return cadena.substring(0, Math.floor(cadena.length / 2));
+        }
+
+        // b) Imprimir el último carácter
+        function ultimoCaracter(cadena) {
+            return cadena.charAt(cadena.length - 1);
+        }
+
+        // c) Imprimir el texto en forma inversa
+        function invertirTexto(cadena) {
+            return cadena.split("").reverse().join("");
+        }
+
+        // d) Imprimir cada carácter separado con un guion
+        function separarConGuiones(cadena) {
+            return cadena.split("").join("-");
+        }
+
+        // e) Contar la cantidad de vocales
+        function contarVocales(cadena) {
+            let contador = 0;
+            let vocales = "aeiouáéíóú";
+
+            for (let i = 0; i < cadena.length; i++) {
+                if (vocales.includes(cadena[i].toLowerCase())) {
+                    contador++;
+                }
+            }
+
+            return contador;
+        }
+
+        document.write("Texto ingresado: " + texto + "<br><br>");
+        document.write("a) Primera mitad: " + primeraMitad(texto) + "<br>");
+        document.write("b) Último carácter: " + ultimoCaracter(texto) + "<br>");
+        document.write("c) Texto inverso: " + invertirTexto(texto) + "<br>");
+        document.write("d) Separado por guiones: " + separarConGuiones(texto) + "<br>");
+        document.write("e) Cantidad de vocales: " + contarVocales(texto));
+    </script>
+
+</body>
+</html>

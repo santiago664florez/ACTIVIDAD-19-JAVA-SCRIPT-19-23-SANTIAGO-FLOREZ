@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mostrar palabras por línea</title>
+</head>
+<body>
+
+    <h1>Separar palabras de una oración</h1>
+
+    <!-- HTML: campo para ingresar la oración -->
+    <label for="oracion">Ingrese una oración:</label>
+    <input type="text" id="oracion">
+
+    <button onclick="separarPalabras()">Mostrar palabras</button>
+
+    <h3>Resultado:</h3>
+    <p id="resultado"></p>
+
+    <!-- JavaScript: lógica del programa -->
+    <script>
+        function separarPalabras() {
+
+            // Obtener la oración ingresada
+            let oracion = document.getElementById("oracion").value;
+
+            // Separar la oración en palabras
+            let palabras = oracion.trim().split(/\s+/);
+
+            // Preparar el resultado
+            let resultado = "";
+
+            // Recorrer cada palabra
+            for (let i = 0; i < palabras.length; i++) {
+                resultado += palabras[i] + "<br>";
+            }
+
+            // Mostrar cada palabra en una línea diferente
+            document.getElementById("resultado").innerHTML =
+                oracion.trim() === "" ? "Ingrese una oración." : resultado;
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Buscar texto</title>
+</head>
+<body>
+
+    <h1>Buscar una palabra en una frase</h1>
+
+    <script>
+        let fuente = prompt("Ingrese una frase o texto:");
+        let clave = prompt("Ingrese el texto que desea buscar:");
+
+        let posicion = fuente.indexOf(clave);
+
+        if (posicion != -1) {
+            document.write("El texto fue encontrado en la posición: " + posicion);
+        } else {
+            document.write("El texto no se encuentra en la frase.");
+        }
+    </script>
+
+</body>
+</html>

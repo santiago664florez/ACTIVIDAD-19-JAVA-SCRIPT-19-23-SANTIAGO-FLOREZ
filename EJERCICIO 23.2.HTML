@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Contar nombres</title>
+</head>
+<body>
+
+    <h1>Contador de nombres</h1>
+
+    <script>
+        let nombre;
+        let contador = 0;
+
+        nombre = prompt("Ingrese un nombre (escriba Fin para terminar):");
+
+        while (nombre.toLowerCase() != "fin") {
+            contador++;
+
+            nombre = prompt("Ingrese otro nombre (escriba Fin para terminar):");
+        }
+
+        document.write("La cantidad de nombres ingresados es: " + contador);
+    </script>
+
+</body>
+</html>
